@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Calendar from './components/Calendar';
+import styled from 'styled-components';
+import DateInput from './components/DateInput';
+
+const Container = styled.div`
+  position: absolute;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  & * {
+    margin: 0;
+    padding: 0;
+  }
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <DateInput/>
+      <Calendar />
+    </Container>
   );
 }
 
